@@ -1,0 +1,137 @@
+﻿{
+  geocoded_waypoints: [
+    {
+      geocoder_status: "OK",
+      place_id: "ChIJcSGE81d8pgARZrK1ivLou2c",
+      types: [
+        "route"
+      ]
+    },
+    {
+      geocoder_status: "OK",
+      place_id: "ChIJGWgd0V58pgARX7gK1EKCdDU",
+      types: [
+        "route"
+      ]
+    }
+  ],
+  routes: [
+    {
+      bounds: {
+        northeast: {
+          lat: -19.6440127,
+          lng: -43.9043009
+        },
+        southwest: {
+          lat: -19.6487407,
+          lng: -43.9053808
+        }
+      },
+      copyrights: "Dados cartográficos ©2017 Google",
+      legs: [
+        {
+          distance: {
+            text: "0,6 km",
+            value: 614
+          },
+          duration: {
+            text: "3 minutos",
+            value: 188
+          },
+          end_address: "Av. Acdo. Nilo Figueiredo, Lagoa Santa - MG, Brasil",
+          end_location: {
+            lat: -19.6440127,
+            lng: -43.9045353
+          },
+          start_address: "R. Nossa Sra. das Graças - Nossa Sra. das Gracas, Lagoa Santa - MG, 33400-000, Brasil",
+          start_location: {
+            lat: -19.6487407,
+            lng: -43.9043009
+          },
+          steps: [
+            {
+              distance: {
+                text: "0,1 km",
+                value: 110
+              },
+              duration: {
+                text: "1 min",
+                value: 31
+              },
+              end_location: {
+                lat: -19.6477699,
+                lng: -43.904442
+              },
+              html_instructions: "Siga na direção <b>norte</b> na <b>R. Nossa Sra. das Graças</b> em direção à <b>R. Santa Helena</b>",
+              polyline: {
+                points: "rs|vBz`~jGg@NS@e@DQBK?M?K@g@A"
+              },
+              start_location: {
+                lat: -19.6487407,
+                lng: -43.9043009
+              },
+              travel_mode: "DRIVING"
+            },
+            {
+              distance: {
+                text: "0,1 km",
+                value: 108
+              },
+              duration: {
+                text: "1 min",
+                value: 48
+              },
+              end_location: {
+                lat: -19.6473674,
+                lng: -43.9053808
+              },
+              html_instructions: "Vire à <b>esquerda</b> na <b>R. José Avelino da Silva</b>",
+              maneuver: "turn-left",
+              polyline: {
+                points: "pm|vBva~jGMp@GPy@vB"
+              },
+              start_location: {
+                lat: -19.6477699,
+                lng: -43.904442
+              },
+              travel_mode: "DRIVING"
+            },
+            {
+              distance: {
+                text: "0,4 km",
+                value: 396
+              },
+              duration: {
+                text: "2 minutos",
+                value: 109
+              },
+              end_location: {
+                lat: -19.6440127,
+                lng: -43.9045353
+              },
+              html_instructions: "Vire à <b>direita</b> na <b>Av. Acdo. Nilo Figueiredo</b>",
+              maneuver: "turn-right",
+              polyline: {
+                points: "`k|vBrg~jGMEOGeBy@q@YEAcBs@KG_@Ma@Ia@Es@@sADgCL"
+              },
+              start_location: {
+                lat: -19.6473674,
+                lng: -43.9053808
+              },
+              travel_mode: "DRIVING"
+            }
+          ],
+          traffic_speed_entry: [],
+          via_waypoint: []
+        }
+      ],
+      overview_polyline: {
+        points: "rs|vBz`~jGg@NS@w@HmA?UbAy@vBMEuBaAw@[oB{@aAWuAC{ER"
+      },
+      summary: "Av. Acdo. Nilo Figueiredo",
+      warnings: [],
+      waypoint_order: []
+    }
+  ],
+  status: "OK"
+}

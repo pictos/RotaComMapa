@@ -1,0 +1,20 @@
+﻿{
+  "dependencies": {
+    "Microsoft.CSharp": "4.3.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Newtonsoft.Json": "10.0.3",
+    "Xamarin.Forms": "2.5.0.91635",
+    "Xamarin.Forms.Maps": "2.5.0.91635"
+  },
+  "frameworks": {
+    "uap10.0.10586": {}
+  },
+  "runtimes": {
+    "win10-arm": {},
+    "win10-arm-aot": {},
+    "win10-x86": {},
+    "win10-x86-aot": {},
+    "win10-x64": {},
+    "win10-x64-aot": {}
+  }
+}
