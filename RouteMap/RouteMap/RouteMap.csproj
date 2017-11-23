@@ -38,6 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomRender\IMapRender.cs" />
+    <Compile Include="CustomRender\IRendererFunction.cs" />
+    <Compile Include="CustomRender\MapCustomRender.cs" />
     <Compile Include="Model\DirecaoResposta.cs" />
     <Compile Include="Model\GooglePoints.cs" />
     <Compile Include="Model\Localizacao.cs" />

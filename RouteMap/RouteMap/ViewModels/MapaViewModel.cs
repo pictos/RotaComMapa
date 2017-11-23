@@ -2,9 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms.Maps;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using RouteMap.CustomRender;
+using Xamarin.Forms.Maps;
 
 namespace RouteMap.ViewModels
 {
@@ -34,10 +35,10 @@ namespace RouteMap.ViewModels
             get { return _destino; }
             set { _destino = value; OnPropertyChanged(); }
         }
-        public static Map myMap;
+        public static MapCustomRender myMap;
         public Command PesquisarCommand { get; }
         private DirecaoServico servico;
-        private readonly string key = "AIzaSyAJ4OGKbN0pMehElNTIn7jpu2-KSFqlRj4";
+        private readonly string key = "SUA KEY";
 
         #endregion
 
@@ -45,7 +46,7 @@ namespace RouteMap.ViewModels
         {
             PesquisarCommand = new Command(async () => await ExecutePesquisarCommand(), () => !IsBusy);
             servico = new DirecaoServico(key);
-            myMap = new Map();
+            myMap = new MapCustomRender();
         }
 
         async Task ExecutePesquisarCommand()
@@ -55,29 +56,18 @@ namespace RouteMap.ViewModels
             {
                 try
                 {
+                    
                     IsBusy = true;
                     var resultado = await servico.ObterRota(Origem, Destino);
+                    
                     foreach (var rotas in resultado.Rotas)
                     {
-                        foreach (var legs in rotas.Legs)
-                        {
-
-                            foreach (var steps in legs.Steps)
-                            {
-                                var localizacao = steps.EndLocation;
-                                var posicao = new Position(localizacao.Latitude, localizacao.Longitude);
-                                var pin = new Pin
-                                {
-                                    Type = PinType.Place,
-                                    Position = posicao,
-                                    Label = $"Latitude:{localizacao.Latitude}",
-                                    Address = $"Longitude:{localizacao.Longitude}"
-                                };
-
-                                myMap.Pins.Add(pin);
-                            }                           
-                        }
+                       var linhas = rotas.Polyline;
+                       var polilyne = linhas.Positions.Select(l => new Position(l.Latitude, l.Longitude)).ToList();
+                       myMap.CoordenadasRota = polilyne;
                     }
+                    
+                    
                 }
                 catch (Exception ex)
                 {

@@ -11,7 +11,8 @@ namespace RouteMap.Services
         private readonly string baseUrl = "https://maps.googleapis.com/maps/api/directions/";
         private HttpClient _httpClient;
         private readonly string _key;
-        public DirecaoServico(string key) => _key = key;
+        //Coloque a key na MapaViewModel. Adquira a key neste site https://developers.google.com/maps/documentation/directions/?hl=pt-br
+        public DirecaoServico(string key) => _key = key; 
 
         public async Task<DirecaoResposta> ObterRota(string origem, string destino)
         {
