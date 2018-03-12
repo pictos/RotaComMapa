@@ -65,6 +65,7 @@ namespace RouteMap.ViewModels
                        var linhas = rotas.Polyline;
                        var polilyne = linhas.Positions.Select(l => new Position(l.Latitude, l.Longitude)).ToList();
                        myMap.CoordenadasRota = polilyne;
+                       myMap.MoveToRegion(MapSpan.FromCenterAndRadius(polilyne.First(), Distance.FromKilometers(2)));
                     }
                     
                     
